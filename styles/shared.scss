@@ -1,1 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+$font-sizes: (
+    main-title--mobile: 48px,
+    sub-title--mobile: 28px,
+    main-title--desktop: 72px,
+    cta--mobile: 15px,
+    body-text--mobile: 16px,
+    hwk-title--mobile: 40px,
+    hwk-title--desktop: 56px,
+    footer-menu--mobile: 14px
+);
+
+$primary-colors: (
+    dark-violet: hsl(256, 26%, 20%),
+    grayish-blue: hsl(216, 30%, 68%)
+);
+
+$neutral-colors: (
+    very-dark-violet: hsl(270, 9%, 17%),
+    dark-grayish-violet: hsl(273, 4%, 51%),
+    very-light-gray: hsl(0, 0%, 98%),
+    footer-hr: hsl(0, 0, 85%)
+);
