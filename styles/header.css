@@ -1,4 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+.btn-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  padding: 0 26px;
+  text-transform: uppercase;
+  font-family: 'Karla', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: auto;
+  letter-spacing: 0.3px;
+}
+
+.btn--light {
+  border: 2px solid #fafafa;
+  background-color: transparent;
+  color: #837d87;
+  -webkit-transition: border 200ms, background-color 200ms, color 200ms;
+  transition: border 200ms, background-color 200ms, color 200ms;
+}
+
+.btn--light:hover {
+  border: 2px solid #2b272f;
+  background-color: #2b272f;
+  color: #fafafa;
+}
+
+.btn--light:active {
+  border: 2px solid #fafafa;
+  background-color: transparent;
+  color: #837d87;
+}
+
+.btn--dark {
+  border: 2px solid #fafafa;
+  background-color: transparent;
+  color: #fafafa;
+  -webkit-transition: border 200ms, background-color 200ms, color 200ms;
+  transition: border 200ms, background-color 200ms, color 200ms;
+}
+
+.btn--dark:hover {
+  background-color: #fafafa;
+  color: #2b272f;
+}
+
+.btn--dark:active {
+  background-color: transparent;
+  color: #fafafa;
+}
+
 header {
   position: relative;
   z-index: 5;
@@ -264,13 +322,21 @@ header {
     margin-left: 0;
   }
   .nav--desktop .nav--item {
-    -webkit-transition: color 200ms;
-    transition: color 200ms;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: color 200ms, -webkit-transform 200ms;
+    transition: color 200ms, -webkit-transform 200ms;
+    transition: color 200ms, transform 200ms;
+    transition: color 200ms, transform 200ms, -webkit-transform 200ms;
   }
   .nav--desktop .nav--item:hover {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
     color: #2b272f;
   }
   .nav--desktop .nav--item:active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     color: #837d87;
   }
   .nav--desktop .btn-cta {

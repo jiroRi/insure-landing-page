@@ -189,12 +189,15 @@ header {
         }
 
         .nav--item {
-            transition: color 200ms;
+            transform: scale(1);
+            transition: color 200ms, transform 200ms;
             &:hover {
+                transform: scale(1.25);
                 color: map-get($neutral-colors, very-dark-violet);
             }
 
             &:active {
+                transform: scale(1);
                 color: map-get($neutral-colors, dark-grayish-violet);
             }
         }
