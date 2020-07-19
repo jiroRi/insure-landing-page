@@ -1,0 +1,147 @@
+@import './shared.scss';
+
+footer {
+    position: relative;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding: 88px 24px;
+    background-color: map-get($neutral-colors, very-light-gray);
+    background-image: url(../images/bg-pattern-footer-mobile.svg);
+    background-position: 0 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @media(min-width: 768px) {
+        background-image: url(../images/bg-pattern-footer-desktop.svg);
+        background-size: 50%;
+    }
+
+    @media(min-width: 1024px) {
+        box-sizing: border-box;
+        padding: 64px 11.46% 0px 11.46%;
+
+        height: 392px;
+    }
+
+    hr {
+        width: 100%;
+        height: 1px;
+
+        margin: 40px auto;
+
+        border: none;
+        background-color: map-get($neutral-colors, footer-hr);
+
+        @media(min-width: 1024px) {
+            margin: 36px auto 48px auto;
+        }
+    }
+}
+
+.footer__title {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    width: 100%;
+
+    a {
+        margin-bottom: 32px;
+    }
+
+    @media(min-width: 1024px) {
+        flex-flow: row;
+        justify-content: space-between;
+
+        a {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer__socmed {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 144px;
+    -webkit-tap-highlight-color: transparent;
+    
+    a > svg > path {
+        transition: fill 300ms;
+    }
+
+    a:hover > svg > path {
+        fill: map-get($neutral-colors, very-dark-violet);
+    }
+
+    a:active > svg > path {
+        fill: map-get($neutral-colors, dark-grayish-violet);
+    }
+}
+
+.footer__menu {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    font-family: 'Karla', sans-serif;
+    font-size: map-get($font-sizes, footer-menu--mobile);
+    line-height: auto;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+
+    width: 100%;
+
+    @media(min-width: 1024px) {
+        justify-content: space-between;
+    }
+
+    nav {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        text-align: center;
+
+        margin-bottom: 40px;
+        width: 225px;
+
+        @media(min-width: 1024px) {
+            align-items: flex-start;
+            text-align: left;
+
+            width: 120px;
+            margin-bottom: 0;
+        }   
+
+        :last-child {
+            margin-bottom: 0;
+        }
+
+        b {
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: map-get($neutral-colors, dark-grayish-violet);
+        }
+
+        a {
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: map-get($neutral-colors, very-dark-violet);
+
+            :last-child {
+                margin-bottom: 0;    
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

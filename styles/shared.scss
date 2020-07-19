@@ -23,3 +23,55 @@ $neutral-colors: (
     very-light-gray: hsl(0, 0%, 98%),
     footer-hr: hsl(0, 0, 85%)
 );
+
+.btn-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    padding: 0 26px;
+
+    text-transform: uppercase;
+    font-family: 'Karla', sans-serif;
+    font-size: map-get($font-sizes, cta--mobile);
+    font-weight: 700;
+    line-height: auto;
+    letter-spacing: 0.3px;
+}
+
+.btn--light {
+    border: 2px solid map-get($neutral-colors, very-light-gray);
+    background-color: transparent;
+    color: map-get($neutral-colors, dark-grayish-violet);
+    transition: border 200ms, background-color 200ms, color 200ms;
+
+    &:hover {
+        border: 2px solid map-get($neutral-colors, very-dark-violet);
+        background-color: map-get($neutral-colors, very-dark-violet);
+        color: map-get($neutral-colors, very-light-gray);
+    }
+
+    &:active {
+        border: 2px solid map-get($neutral-colors, very-light-gray);
+        background-color: transparent;
+        color: map-get($neutral-colors, dark-grayish-violet);
+    }
+}
+
+.btn--dark {
+    border: 2px solid map-get($neutral-colors, very-light-gray);
+    background-color: transparent;
+    color: map-get($neutral-colors, very-light-gray);
+    transition: border 200ms, background-color 200ms, color 200ms;
+
+    &:hover {
+        background-color: map-get($neutral-colors, very-light-gray);
+        color: map-get($neutral-colors, very-dark-violet);
+    }
+
+    &:active {
+        background-color: transparent;
+        color: map-get($neutral-colors, very-light-gray);
+    }
+}
