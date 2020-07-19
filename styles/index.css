@@ -382,13 +382,21 @@ header {
     margin-left: 0;
   }
   .nav--desktop .nav--item {
-    -webkit-transition: color 200ms;
-    transition: color 200ms;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: color 200ms, -webkit-transform 200ms;
+    transition: color 200ms, -webkit-transform 200ms;
+    transition: color 200ms, transform 200ms;
+    transition: color 200ms, transform 200ms, -webkit-transform 200ms;
   }
   .nav--desktop .nav--item:hover {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
     color: #2b272f;
   }
   .nav--desktop .nav--item:active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     color: #837d87;
   }
   .nav--desktop .btn-cta {
@@ -559,8 +567,8 @@ footer hr {
 }
 
 .footer__socmed a > svg > path {
-  -webkit-transition: fill 200ms;
-  transition: fill 200ms;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
 }
 
 .footer__socmed a:hover > svg > path {
