@@ -297,11 +297,13 @@ a {
         margin-bottom: 80px;
         line-height: 48px;
         letter-spacing: -0.75px;
+        text-align: center;
 
         @media(min-width: 1024px) {
             font-size: map-get($font-sizes, main-title--desktop);
             line-height: 64px;
             letter-spacing: -1px;
+            text-align: left;
 
             margin-bottom: 96px;
         }
