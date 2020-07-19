@@ -494,6 +494,9 @@ footer {
 
 @media (min-width: 1024px) {
   footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 64px 11.46% 0px 11.46%;
@@ -606,6 +609,7 @@ footer hr {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 84.68%;
   }
 }
 
@@ -631,7 +635,7 @@ footer hr {
         -ms-flex-align: start;
             align-items: flex-start;
     text-align: left;
-    width: 120px;
+    width: auto;
     margin-bottom: 0;
   }
 }
