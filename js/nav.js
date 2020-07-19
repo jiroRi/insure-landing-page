@@ -3,7 +3,7 @@ let navMobileBtnBG = document.querySelector('.nav--mobile__button > div');
 let navMobile = document.querySelector('.nav--mobile')
 let indexBody = document.querySelector('body')
 
-let navDisplay = false
+let navDisplay = true
 
 let navIsOpen = () => {
     navMobileBtnBG.style.backgroundImage = `url(images/icon-close.svg)`
@@ -16,7 +16,7 @@ let navIsOpen = () => {
 
     indexBody.style.overflowY = `hidden`
 
-    navDisplay = true
+    navDisplay = false
 }
 
 let navIsClose = () => {
@@ -33,9 +33,9 @@ let navIsClose = () => {
 
     indexBody.style.overflowY = `visible`
 
-    navDisplay = false
+    navDisplay = true
 }
 
 navMobileBtn.addEventListener("click", () => {
-    (navDisplay ? navIsClose() : navIsOpen())
+    (navDisplay ? navIsOpen() : navIsClose())
 })
