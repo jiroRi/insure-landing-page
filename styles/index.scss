@@ -10,18 +10,21 @@ body {
     margin: 0 auto;
 }
 
-body::-webkit-scrollbar {
-    width: 8px;
-  }
-   
-  body::-webkit-scrollbar-track {
+@media(min-width: 1024px) {
+    body::-webkit-scrollbar {
+        width: 8px;
+      }
+       
+    body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  body::-webkit-scrollbar-thumb {
+    }
+       
+    body::-webkit-scrollbar-thumb {
     background-color: map-get($neutral-colors, dark-grayish-violet);
     outline: 1px solid map-get($neutral-colors, very-dark-violet);
-  }
+    }
+}
+
 
 p {
     font-family: 'Karla', sans-serif;
